@@ -1,0 +1,20 @@
+Bricolite - A SOAP-powered minimal interface to Bricolage
+=========================================================
+
+Bricolite presents a simplified user interface to Bricolage. Users can create,
+view, update recent stories, and nothing more.
+
+This code is meant as a starting point rather than an out-of-the-box solution,
+as Bricolage installations are by nature very different from each other
+(story types and elements, output channels, use of keywords, contributors,
+permissions, etc.) This code as-distributed should work on a stock Bricolage
+install as it only references the root category and the "story" element type.
+
+Resources
+=========
+
+- Perldoc in BricLite.pm
+
+- Screencast! http://screencast.com/t/qdmwtvjlaz
+
+

@@ -1,0 +1,172 @@
+/* 
+FILE: /cms/bricolite.css
+DESC: Styles for bricolite mini-cms
+DATE: October 3, 2008
+NOTE: Blatantly borrowed from tumblr.com
+
+COLOURS:
+
+#334667 - Background blue
+
+
+CHANGELOG:
+- October 3, 2008 - First past
+
+ */
+
+.ui-dialog-titlebar {
+	display: none;
+}
+
+.ui-dialog {
+	background: white;
+}
+
+/* @group Layout */
+
+body {
+	margin: 50px 0px;
+	padding: 0px;
+	text-align: center;
+	font: large Georgia, "Times New Roman", Times, serif;
+	background: #334667 url('images/background.png') top repeat-x;
+}
+
+#content {
+	width: 800px;
+	margin: 0px auto;
+	text-align: left;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	padding: 30px;
+	background: #fff url(images/bricolite.png) no-repeat right bottom;
+}
+
+/* @end *
+
+/
+
+/* @group Form elements */
+
+fieldset {
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+legend {
+	font-size: 2em;
+	display: block;
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+
+label {
+	display: block;
+	font-size: 1.4em;
+	padding-top: 20px;
+}
+
+input[type="text"],input[type="password"] {
+	border: solid 1px #bbb;
+	padding: 7px;
+	color: #222;
+	background: #fff url('images/input_bg.gif') repeat-x top;
+	outline: 0;
+	margin: 0px;
+	border-color: #bbbbbb;
+	font: normal 20px Georgia;
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+
+input[type="text"]:focus,input[type="password"]:focus {
+	background: #E1E8F1 url('images/input_blue_bg.gif') top repeat-x;
+	border-color: #B7C7D3;
+}
+
+input[type="submit"] {
+	font-size: large;
+}
+
+body.post input#name {
+	width: 600px;
+}
+
+body.post input.keyword {
+	margin-bottom: 10px;
+}
+
+body.post input.cancel {
+	background: none;
+	border: none;
+	color: blue;
+}
+
+body.post input.cancel:hover {
+	text-decoration: underline;
+}
+
+/* @
+
+end */
+
+/* @group Blueprint form classes */
+
+/* Select fields */
+
+select {
+	border: 1px solid #ccc;
+	background: #f6f6f6;
+	width: 200px;
+}
+
+select:focus {
+	border: 1px solid #999;
+	background: #fff;
+}
+
+/* Success, error & notice boxes for messages and errors. */
+
+.error,
+.notice, 
+.success {
+	padding: .8em;
+	margin-bottom: 1em;
+	border: 2px solid #ddd;
+}
+
+.error {
+	background: #FBE3E4;
+	color: #D12F19;
+	border-color: #FBC2C4;
+}
+
+.notice {
+	background: #FFF6BF;
+	color: #817134;
+	border-color: #FFD324;
+}
+
+.success {
+	background: #E6EFC2;
+	color: #529214;
+	border-color: #C6D880;
+}
+
+.error a {
+	color: #D12F19;
+}
+
+.notice a {
+	color: #817134;
+}
+
+.success a {
+	color: #529214;
+}
+
+/* @end */
