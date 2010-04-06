@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use strict;
-use BricLite;
+use Bric::Lite;
 
 use Data::Dumper;
 use CGI;

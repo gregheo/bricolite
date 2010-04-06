@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use strict;
-use BricLite;
+use Bric::Lite;
 use Encode;
 use XML::LibXML;
 use Data::Dumper;
@@ -18,7 +18,7 @@ if (!$session->param('username')) {
     exit;
 }
 
-my $briclite = new BricLite($session->param_hashref);
+my $briclite = new Bric::Lite($session->param_hashref);
 
 #print $session->header(-type=>'text/html', -charset=>'utf-8');
 print $session->header();

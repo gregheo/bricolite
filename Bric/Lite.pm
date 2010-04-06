@@ -1,4 +1,4 @@
-package BricLite;
+package Bric::Lite;
 
 use strict;
 
@@ -30,7 +30,7 @@ use constant MAX_SLUG_LENGTH => 20;
 use constant HOW_LATEST => 20;
 
 # bricolage variables: URL, site name, output channel
-use constant BRIC_SOAP_URL => "http://bricolage.example.com:8001/soap";
+use constant BRIC_SOAP_URL => "http://phantom.node79.com:8001/soap";
 use constant BRIC_SITE => "Default Site";
 use constant BRIC_OC => "Web";
 
@@ -44,7 +44,6 @@ use constant REALLY_PUBLISH => 0;
 # publish desk name
 use constant PUBLISH_DESK => 'Publish';
 
-# source name
 use constant SOURCE_NAME => 'Internal';
 
 # log file
@@ -58,6 +57,7 @@ use constant CATEGORIES => qw/1/;
 use constant COOKIE_DIR => '/tmp';
 
 ############################### end configuration ############################
+
 
 
 my $soap;
@@ -92,8 +92,8 @@ sub init_soap
         
     $soap->proxy(BRIC_SOAP_URL,
                  cookie_jar => HTTP::Cookies->new(ignore_discard => 1,
-                 file => $cookie_string,
-                 autosave => 1),
+                     file => $cookie_string,
+                     autosave => 1),
                  timeout => $timeout,
     );  
 
@@ -130,6 +130,8 @@ sub login
     push @opts, name('user_ids', \@ids);
     my $user_xml = $soap->export(@opts)->result;
 
+
+
     my %userdata;
     $userdata{'username'} = $username;
     $userdata{'user_id'} = $user_id;
@@ -146,6 +148,7 @@ sub login
     }
 
     return \%userdata;
+
 }
 
 
@@ -606,21 +609,21 @@ __END__
 
 =head1 NAME
 
-BricLite - A light Perl interface to a remote Bricolage/SOAP server
+Bric::Lite - A light Perl interface to a remote Bricolage/SOAP server
 
 =head1 SYNOPSIS
 
-    use BricLite;
-    my $briclite = new BricLite;
+    use Bric::Lite;
+    my $briclite = new Bric::Lite;
 
 =head1 DESCRIPTION
 
-BricLite.pm is part of the 'Bricolite' distribution, a simplified user
+Bric/Lite.pm is part of the 'Bricolite' distribution, a simplified user
 interface to Bricolage. Bricolite was originally developed to make things
 easier for bloggers by presenting them with a basic feature set: view recent
 posts, add/edit posts, rich-text editor, etc.
 
-The goal of BricLite.pm is to wrap the server-to-server communication and
+The goal of Bric/Lite.pm is to wrap the server-to-server communication and
 to provide simple entry points into Bricolage. The front-end pages are
 Perl CGI.
 

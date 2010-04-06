@@ -5,7 +5,7 @@ use strict;
 use CGI;
 use CGI::Cookie;
 use CGI::Session ('-ip_match');
-use BricLite;
+use Bric::Lite;
 use Data::Dumper;
 
 my $cgi = new CGI;
@@ -15,7 +15,7 @@ if (!$cgi->param('username')) {
     exit;
 }
 
-my $briclite = new BricLite;
+my $briclite = new Bric::Lite;
 my $userdata;
 
 eval {

@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use strict;
-use BricLite;
+use Bric::Lite;
 use CGI;
 use CGI::Session ('-ip_match');
 use Data::Dumper;
@@ -16,7 +16,7 @@ if (!$session->param('username')) {
     exit;
 }
 
-my $briclite = new BricLite($session->param_hashref);
+my $briclite = new Bric::Lite($session->param_hashref);
 
 print $session->header;
 print $cgi->start_html(-title => 'bricolite - Your latest blog posts',
